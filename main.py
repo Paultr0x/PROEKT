@@ -59,12 +59,9 @@ def ParseMTUCI():
                 name = data[1].text.strip().replace("\n", " ")
                 price = data[2].text.strip().replace(" ", "")
                 res = UniversityPlace("МТУСИ", code, name, price)
-                # if res.isValid():
-                #    print(str(res))
                 Results.append(res)
             except Exception as e:
                 pass
-                # print(e)
 
 
 def ParseMADI():
@@ -86,8 +83,6 @@ def ParseMADI():
                 if not price.isdigit():
                     continue
                 res = UniversityPlace("МАДИ", code, name, price)
-                # if res.isValid():
-                #    print(str(res))
                 Results.append(res)
             except Exception as e:
                 pass
